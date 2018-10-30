@@ -5,7 +5,7 @@ public class Rectangle extends Shape implements Comparable<Object> {
     int iWidth, iLength; //sides
 
  
-    public Rectangle(int iWidth, int iLength) {
+    public Rectangle(int iLength, int iWidth) {
         this.iWidth =iWidth;
         this.iLength = iLength;
     }
@@ -39,6 +39,7 @@ public class Rectangle extends Shape implements Comparable<Object> {
 	   this.iLength=iLength;
    }
 
+   //comparing area of rectangles
 @Override
 public int compareTo(Object o) {
 	if( this.area() > ((Rectangle)o).area()) {

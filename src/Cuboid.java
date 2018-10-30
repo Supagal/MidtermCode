@@ -6,8 +6,8 @@ public class Cuboid extends Rectangle implements Comparable<Object>{
 
 	 int iDepth;
 	
-	public Cuboid(int iWidth, int iLength, int iDepth) {
-        super(iWidth,iLength);
+	public Cuboid(int iLength, int iWidth, int iDepth) {
+        super(iLength,iWidth);
 		this.iDepth = iDepth;
     }
 	
@@ -29,7 +29,8 @@ public class Cuboid extends Rectangle implements Comparable<Object>{
 	@Override
     public double area() {
         // A = w * l
-        return 2*iDepth*(this.iWidth + this.iLength);
+        return 2*(this.iLength*this.iWidth)+(this.iDepth*this.iWidth)*2 
+        		+ (this.iLength*this.iDepth)*2;
     }
 	
 	///THROW EXCEPTION IF PERIMETER CALLED
